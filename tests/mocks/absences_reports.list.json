@@ -1,0 +1,1487 @@
+{
+    "meta": {
+        "totals": {
+            "rows": 30
+        },
+        "version": "7.0.0-2023-01-06-09:47",
+        "isLogged": true,
+        "language": "fr"
+    },
+    "data": [
+        {
+            "id": "31",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2022-07-19T00:00:00+0200",
+                "state": "savedAndNoValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "52",
+                        "startDate": "2022-03-13",
+                        "endDate": "2022-03-13",
+                        "duration": 1,
+                        "title": "avant",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "51",
+                        "startDate": "2022-07-31",
+                        "endDate": "2022-07-31",
+                        "duration": 1,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "5",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "30",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2022-07-19T00:00:00+0200",
+                "state": "savedAndNoValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "50",
+                        "startDate": "2022-03-13",
+                        "endDate": "2022-03-13",
+                        "duration": 1,
+                        "title": "avant",
+                        "workUnitType": {
+                            "reference": 1,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "49",
+                        "startDate": "2022-07-31",
+                        "endDate": "2022-07-31",
+                        "duration": 1,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 1,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "3",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "5",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "29",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2022-07-19T00:00:00+0200",
+                "state": "rejected",
+                "absencesPeriods": [
+                    {
+                        "id": "47",
+                        "startDate": "2022-07-23",
+                        "endDate": "2022-07-27",
+                        "duration": 5,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "48",
+                        "startDate": "2022-07-30",
+                        "endDate": "2022-07-31",
+                        "duration": 2,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "26",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "28",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2022-07-19T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "46",
+                        "startDate": "2022-07-13",
+                        "endDate": "2022-07-13",
+                        "duration": 1,
+                        "title": "test rtt",
+                        "workUnitType": {
+                            "reference": 5,
+                            "activityType": "absence",
+                            "name": "Overtime catch-up"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "26",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "27",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2022-07-19T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "44",
+                        "startDate": "2022-05-02",
+                        "endDate": "2022-05-02",
+                        "duration": 1,
+                        "title": "test",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "26",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "26",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2022-07-19T00:00:00+0200",
+                "state": "validated",
+                "absencesPeriods": [
+                    {
+                        "id": "43",
+                        "startDate": "2022-07-23",
+                        "endDate": "2022-07-27",
+                        "duration": 5,
+                        "title": "holiday",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "26",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "25",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2022-07-19T00:00:00+0200",
+                "state": "savedAndNoValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "45",
+                        "startDate": "2019-10-28",
+                        "endDate": "2019-10-28",
+                        "duration": 1,
+                        "title": "hb",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "26",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "24",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-24T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "39",
+                        "startDate": "2021-05-02",
+                        "endDate": "2021-05-05",
+                        "duration": 4,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "40",
+                        "startDate": "2021-05-30",
+                        "endDate": "2021-05-31",
+                        "duration": 2,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "41",
+                        "startDate": "2021-06-01",
+                        "endDate": "2021-06-02",
+                        "duration": 2,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "2",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "15",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "23",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-24T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "38",
+                        "startDate": "2021-06-12",
+                        "endDate": "2021-06-16",
+                        "duration": 5,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "2",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "12",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "22",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-24T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "36",
+                        "startDate": "2021-05-02",
+                        "endDate": "2021-05-05",
+                        "duration": 4,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "37",
+                        "startDate": "2021-05-09",
+                        "endDate": "2021-05-12",
+                        "duration": 4,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 5,
+                            "activityType": "absence",
+                            "name": "Overtime catch-up"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "2",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "21",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-24T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "35",
+                        "startDate": "2021-07-17",
+                        "endDate": "2021-07-21",
+                        "duration": 5,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "2",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "20",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-24T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "33",
+                        "startDate": "2021-07-10",
+                        "endDate": "2021-07-11",
+                        "duration": 2,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "34",
+                        "startDate": "2021-07-12",
+                        "endDate": "2021-07-13",
+                        "duration": 2,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 5,
+                            "activityType": "absence",
+                            "name": "Overtime catch-up"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "8",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "19",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-24T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "32",
+                        "startDate": "2021-05-09",
+                        "endDate": "2021-05-12",
+                        "duration": 4,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "8",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "18",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-24T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "30",
+                        "startDate": "2021-05-09",
+                        "endDate": "2021-05-12",
+                        "duration": 4,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "11",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "17",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-24T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "28",
+                        "startDate": "2021-05-22",
+                        "endDate": "2021-05-24",
+                        "duration": 3,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "29",
+                        "startDate": "2021-05-26",
+                        "endDate": "2021-05-26",
+                        "duration": 1,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "14",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "16",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-24T00:00:00+0200",
+                "state": "validated",
+                "absencesPeriods": [
+                    {
+                        "id": "25",
+                        "startDate": "2021-05-02",
+                        "endDate": "2021-05-05",
+                        "duration": 4,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "26",
+                        "startDate": "2021-05-22",
+                        "endDate": "2021-05-24",
+                        "duration": 3,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 5,
+                            "activityType": "absence",
+                            "name": "Overtime catch-up"
+                        }
+                    },
+                    {
+                        "id": "27",
+                        "startDate": "2021-05-26",
+                        "endDate": "2021-05-26",
+                        "duration": 1,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 5,
+                            "activityType": "absence",
+                            "name": "Overtime catch-up"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "1",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "15",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-21T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "23",
+                        "startDate": "2021-07-10",
+                        "endDate": "2021-07-14",
+                        "duration": 5,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 5,
+                            "activityType": "absence",
+                            "name": "Overtime catch-up"
+                        }
+                    },
+                    {
+                        "id": "24",
+                        "startDate": "2021-07-17",
+                        "endDate": "2021-07-21",
+                        "duration": 5,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 4,
+                            "activityType": "absence",
+                            "name": "CSS"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "2",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "10",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "14",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-21T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "22",
+                        "startDate": "2021-05-02",
+                        "endDate": "2021-05-05",
+                        "duration": 4,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "2",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "10",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "13",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-21T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "20",
+                        "startDate": "2021-07-14",
+                        "endDate": "2021-07-14",
+                        "duration": 1,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "21",
+                        "startDate": "2021-07-17",
+                        "endDate": "2021-07-21",
+                        "duration": 5,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "2",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "9",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "12",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-21T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "19",
+                        "startDate": "2021-05-02",
+                        "endDate": "2021-05-05",
+                        "duration": 4,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "2",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "9",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "11",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-21T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "18",
+                        "startDate": "2021-05-02",
+                        "endDate": "2021-05-05",
+                        "duration": 4,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "30",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "10",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-21T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "16",
+                        "startDate": "2021-07-17",
+                        "endDate": "2021-07-21",
+                        "duration": 5,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "17",
+                        "startDate": "2021-07-24",
+                        "endDate": "2021-07-28",
+                        "duration": 5,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 5,
+                            "activityType": "absence",
+                            "name": "Overtime catch-up"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "33",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "9",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-21T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "13",
+                        "startDate": "2021-05-02",
+                        "endDate": "2021-05-05",
+                        "duration": 4,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "14",
+                        "startDate": "2021-05-30",
+                        "endDate": "2021-05-31",
+                        "duration": 2,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 5,
+                            "activityType": "absence",
+                            "name": "Overtime catch-up"
+                        }
+                    },
+                    {
+                        "id": "15",
+                        "startDate": "2021-06-01",
+                        "endDate": "2021-06-02",
+                        "duration": 2,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 5,
+                            "activityType": "absence",
+                            "name": "Overtime catch-up"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "2",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "4",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "8",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-11T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "11",
+                        "startDate": "2021-05-22",
+                        "endDate": "2021-05-24",
+                        "duration": 3,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "12",
+                        "startDate": "2021-05-26",
+                        "endDate": "2021-05-26",
+                        "duration": 1,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "5",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "7",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-11T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "9",
+                        "startDate": "2021-07-10",
+                        "endDate": "2021-07-13",
+                        "duration": 4,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "10",
+                        "startDate": "2021-07-17",
+                        "endDate": "2021-07-21",
+                        "duration": 5,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "31",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "6",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-11T00:00:00+0200",
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "7",
+                        "startDate": "2021-05-09",
+                        "endDate": "2021-05-12",
+                        "duration": 4,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "8",
+                        "startDate": "2021-05-26",
+                        "endDate": "2021-05-26",
+                        "duration": 1,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "32",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "5",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-11T00:00:00+0200",
+                "state": "savedAndNoValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "6",
+                        "startDate": "2021-05-26",
+                        "endDate": "2021-05-26",
+                        "duration": 1,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "30",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "4",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-04T00:00:00+0200",
+                "state": "validated",
+                "absencesPeriods": [
+                    {
+                        "id": "5",
+                        "startDate": "2021-06-12",
+                        "endDate": "2021-06-16",
+                        "duration": 5,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "3",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "3",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-04T00:00:00+0200",
+                "state": "validated",
+                "absencesPeriods": [
+                    {
+                        "id": "3",
+                        "startDate": "2021-05-24",
+                        "endDate": "2021-05-24",
+                        "duration": 1,
+                        "title": "May vacations",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    },
+                    {
+                        "id": "4",
+                        "startDate": "2021-05-26",
+                        "endDate": "2021-05-26",
+                        "duration": 1,
+                        "title": "",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "27",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "2",
+            "type": "absencesreport",
+            "attributes": {
+                "creationDate": "2021-07-04T00:00:00+0200",
+                "state": "validated",
+                "absencesPeriods": [
+                    {
+                        "id": "2",
+                        "startDate": "2021-07-10",
+                        "endDate": "2021-07-13",
+                        "duration": 4,
+                        "title": "Summer vacations",
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "VP"
+                        }
+                    }
+                ]
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "1",
+                        "type": "agency"
+                    }
+                },
+                "resource": {
+                    "data": {
+                        "id": "26",
+                        "type": "resource"
+                    }
+                }
+            }
+        }
+    ],
+    "included": [
+        {
+            "id": "1",
+            "type": "agency",
+            "attributes": {
+                "name": "France Agency"
+            }
+        },
+        {
+            "id": "5",
+            "type": "resource",
+            "attributes": {
+                "lastName": "GALLAGHER",
+                "firstName": "Sydney"
+            }
+        },
+        {
+            "id": "3",
+            "type": "agency",
+            "attributes": {
+                "name": "Belgium Agency"
+            }
+        },
+        {
+            "id": "26",
+            "type": "resource",
+            "attributes": {
+                "lastName": "DIXON",
+                "firstName": "Bill"
+            }
+        },
+        {
+            "id": "2",
+            "type": "agency",
+            "attributes": {
+                "name": "United Kingdom Agency"
+            }
+        },
+        {
+            "id": "15",
+            "type": "resource",
+            "attributes": {
+                "lastName": "WILLIAMS",
+                "firstName": "Charles"
+            }
+        },
+        {
+            "id": "12",
+            "type": "resource",
+            "attributes": {
+                "lastName": "WILSON",
+                "firstName": "Timothy"
+            }
+        },
+        {
+            "id": "2",
+            "type": "resource",
+            "attributes": {
+                "lastName": "VARGAS",
+                "firstName": "Matthew"
+            }
+        },
+        {
+            "id": "8",
+            "type": "resource",
+            "attributes": {
+                "lastName": "FISCHER",
+                "firstName": "Marco"
+            }
+        },
+        {
+            "id": "11",
+            "type": "resource",
+            "attributes": {
+                "lastName": "WRIGHT",
+                "firstName": "Kenneth"
+            }
+        },
+        {
+            "id": "14",
+            "type": "resource",
+            "attributes": {
+                "lastName": "GRAY",
+                "firstName": "Lois"
+            }
+        },
+        {
+            "id": "1",
+            "type": "resource",
+            "attributes": {
+                "lastName": "PARKER",
+                "firstName": "Victor"
+            }
+        },
+        {
+            "id": "10",
+            "type": "resource",
+            "attributes": {
+                "lastName": "HARRIS",
+                "firstName": "Gregory"
+            }
+        },
+        {
+            "id": "9",
+            "type": "resource",
+            "attributes": {
+                "lastName": "BROWNING",
+                "firstName": "Peter"
+            }
+        },
+        {
+            "id": "30",
+            "type": "resource",
+            "attributes": {
+                "lastName": "HAMILTON",
+                "firstName": "Timothy"
+            }
+        },
+        {
+            "id": "33",
+            "type": "resource",
+            "attributes": {
+                "lastName": "MORRIS",
+                "firstName": "Justin"
+            }
+        },
+        {
+            "id": "4",
+            "type": "resource",
+            "attributes": {
+                "lastName": "BROWN",
+                "firstName": "Paul"
+            }
+        },
+        {
+            "id": "31",
+            "type": "resource",
+            "attributes": {
+                "lastName": "TRAN",
+                "firstName": "Jose"
+            }
+        },
+        {
+            "id": "32",
+            "type": "resource",
+            "attributes": {
+                "lastName": "JOHNSON",
+                "firstName": "Miguel"
+            }
+        },
+        {
+            "id": "3",
+            "type": "resource",
+            "attributes": {
+                "lastName": "LOPEZ",
+                "firstName": "Stephen"
+            }
+        },
+        {
+            "id": "27",
+            "type": "resource",
+            "attributes": {
+                "lastName": "HARRIS",
+                "firstName": "Gregory"
+            }
+        }
+    ]
+}

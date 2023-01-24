@@ -1,0 +1,9 @@
+-r base.txt
+-r doc.txt
+-r test.txt
+
+ipython
+ipdb
+pylint
+pycodestyle
+pre-commit

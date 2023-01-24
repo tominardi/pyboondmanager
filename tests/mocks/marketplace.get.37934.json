@@ -1,0 +1,976 @@
+{
+    "meta": {
+        "apisAllowed": [
+            {
+                "page": "absences",
+                "event": "read"
+            },
+            {
+                "page": "absences-reports",
+                "event": "read"
+            },
+            {
+                "page": "absences-reports",
+                "event": "create"
+            },
+            {
+                "page": "absences-reports/@id",
+                "event": "read"
+            },
+            {
+                "page": "absences-reports/@id",
+                "event": "update"
+            },
+            {
+                "page": "absences-reports/@id",
+                "event": "delete"
+            },
+            {
+                "page": "accounts",
+                "event": "read"
+            },
+            {
+                "page": "accounts",
+                "event": "create"
+            },
+            {
+                "page": "accounts/@id",
+                "event": "read"
+            },
+            {
+                "page": "accounts/@id",
+                "event": "update"
+            },
+            {
+                "page": "accounts/@id",
+                "event": "delete"
+            },
+            {
+                "page": "actions",
+                "event": "read"
+            },
+            {
+                "page": "actions",
+                "event": "create"
+            },
+            {
+                "page": "actions/@id",
+                "event": "read"
+            },
+            {
+                "page": "actions/@id",
+                "event": "update"
+            },
+            {
+                "page": "actions/@id",
+                "event": "delete"
+            },
+            {
+                "page": "advantages",
+                "event": "read"
+            },
+            {
+                "page": "advantages",
+                "event": "create"
+            },
+            {
+                "page": "advantages/@id",
+                "event": "read"
+            },
+            {
+                "page": "advantages/@id",
+                "event": "update"
+            },
+            {
+                "page": "advantages/@id",
+                "event": "delete"
+            },
+            {
+                "page": "agencies",
+                "event": "read"
+            },
+            {
+                "page": "agencies",
+                "event": "create"
+            },
+            {
+                "page": "agencies/@id",
+                "event": "read"
+            },
+            {
+                "page": "agencies/@id",
+                "event": "update"
+            },
+            {
+                "page": "agencies/@id",
+                "event": "delete"
+            },
+            {
+                "page": "application/assignments",
+                "event": "read"
+            },
+            {
+                "page": "application/current-user",
+                "event": "read"
+            },
+            {
+                "page": "application/dictionary",
+                "event": "read"
+            },
+            {
+                "page": "application/flags",
+                "event": "read"
+            },
+            {
+                "page": "application/perimeters",
+                "event": "read"
+            },
+            {
+                "page": "application/weekend-and-bank-holidays",
+                "event": "read"
+            },
+            {
+                "page": "attached-flags",
+                "event": "create"
+            },
+            {
+                "page": "attached-flags",
+                "event": "delete"
+            },
+            {
+                "page": "billing-deliveries-purchases-balance",
+                "event": "read"
+            },
+            {
+                "page": "billing-monthly-balance",
+                "event": "read"
+            },
+            {
+                "page": "billing-projects-balance",
+                "event": "read"
+            },
+            {
+                "page": "billing-schedules-balance",
+                "event": "read"
+            },
+            {
+                "page": "business-units",
+                "event": "read"
+            },
+            {
+                "page": "business-units",
+                "event": "create"
+            },
+            {
+                "page": "business-units/@id",
+                "event": "read"
+            },
+            {
+                "page": "business-units/@id",
+                "event": "delete"
+            },
+            {
+                "page": "business-units/@id",
+                "event": "update"
+            },
+            {
+                "page": "calendars",
+                "event": "read"
+            },
+            {
+                "page": "calendars/@id",
+                "event": "read"
+            },
+            {
+                "page": "calendars/@id",
+                "event": "update"
+            },
+            {
+                "page": "candidates",
+                "event": "read"
+            },
+            {
+                "page": "candidates",
+                "event": "create"
+            },
+            {
+                "page": "candidates/@id",
+                "event": "read"
+            },
+            {
+                "page": "candidates/@id",
+                "event": "update"
+            },
+            {
+                "page": "candidates/@id",
+                "event": "delete"
+            },
+            {
+                "page": "companies",
+                "event": "read"
+            },
+            {
+                "page": "companies",
+                "event": "create"
+            },
+            {
+                "page": "companies/@id",
+                "event": "read"
+            },
+            {
+                "page": "companies/@id",
+                "event": "update"
+            },
+            {
+                "page": "companies/@id",
+                "event": "delete"
+            },
+            {
+                "page": "contacts",
+                "event": "read"
+            },
+            {
+                "page": "contacts",
+                "event": "create"
+            },
+            {
+                "page": "contacts/@id",
+                "event": "read"
+            },
+            {
+                "page": "contacts/@id",
+                "event": "update"
+            },
+            {
+                "page": "contacts/@id",
+                "event": "delete"
+            },
+            {
+                "page": "contracts",
+                "event": "read"
+            },
+            {
+                "page": "contracts",
+                "event": "create"
+            },
+            {
+                "page": "contracts/@id",
+                "event": "read"
+            },
+            {
+                "page": "contracts/@id",
+                "event": "update"
+            },
+            {
+                "page": "contracts/@id",
+                "event": "delete"
+            },
+            {
+                "page": "dashboard",
+                "event": "read"
+            },
+            {
+                "page": "deliveries",
+                "event": "create"
+            },
+            {
+                "page": "deliveries/@id",
+                "event": "read"
+            },
+            {
+                "page": "deliveries/@id",
+                "event": "update"
+            },
+            {
+                "page": "deliveries/@id",
+                "event": "delete"
+            },
+            {
+                "page": "deliveries-groupments",
+                "event": "read"
+            },
+            {
+                "page": "documents",
+                "event": "create"
+            },
+            {
+                "page": "documents/@id",
+                "event": "read"
+            },
+            {
+                "page": "documents/@id",
+                "event": "update"
+            },
+            {
+                "page": "documents/@id",
+                "event": "delete"
+            },
+            {
+                "page": "download-center",
+                "event": "create"
+            },
+            {
+                "page": "download-center",
+                "event": "read"
+            },
+            {
+                "page": "download-center",
+                "event": "delete"
+            },
+            {
+                "page": "expenses",
+                "event": "read"
+            },
+            {
+                "page": "expenses-reports",
+                "event": "read"
+            },
+            {
+                "page": "expenses-reports",
+                "event": "create"
+            },
+            {
+                "page": "expenses-reports/@id",
+                "event": "read"
+            },
+            {
+                "page": "expenses-reports/@id",
+                "event": "update"
+            },
+            {
+                "page": "expenses-reports/@id",
+                "event": "delete"
+            },
+            {
+                "page": "flags",
+                "event": "read"
+            },
+            {
+                "page": "flags",
+                "event": "create"
+            },
+            {
+                "page": "flags/@id",
+                "event": "read"
+            },
+            {
+                "page": "flags/@id",
+                "event": "update"
+            },
+            {
+                "page": "flags/@id",
+                "event": "delete"
+            },
+            {
+                "page": "groupments",
+                "event": "read"
+            },
+            {
+                "page": "groupments",
+                "event": "create"
+            },
+            {
+                "page": "groupments/@id",
+                "event": "read"
+            },
+            {
+                "page": "groupments/@id",
+                "event": "update"
+            },
+            {
+                "page": "groupments/@id",
+                "event": "delete"
+            },
+            {
+                "page": "inactivities",
+                "event": "read"
+            },
+            {
+                "page": "inactivities",
+                "event": "create"
+            },
+            {
+                "page": "inactivities/@id",
+                "event": "read"
+            },
+            {
+                "page": "inactivities/@id",
+                "event": "update"
+            },
+            {
+                "page": "inactivities/@id",
+                "event": "delete"
+            },
+            {
+                "page": "invoices",
+                "event": "read"
+            },
+            {
+                "page": "invoices/@id",
+                "event": "read"
+            },
+            {
+                "page": "invoices",
+                "event": "create"
+            },
+            {
+                "page": "invoices/@id",
+                "event": "update"
+            },
+            {
+                "page": "invoices/@id",
+                "event": "delete"
+            },
+            {
+                "page": "logs",
+                "event": "read"
+            },
+            {
+                "page": "logs/@id",
+                "event": "read"
+            },
+            {
+                "page": "opportunities",
+                "event": "read"
+            },
+            {
+                "page": "opportunities/@id",
+                "event": "read"
+            },
+            {
+                "page": "opportunities",
+                "event": "create"
+            },
+            {
+                "page": "opportunities/@id",
+                "event": "update"
+            },
+            {
+                "page": "opportunities/@id",
+                "event": "delete"
+            },
+            {
+                "page": "orders",
+                "event": "read"
+            },
+            {
+                "page": "orders/@id",
+                "event": "read"
+            },
+            {
+                "page": "orders",
+                "event": "create"
+            },
+            {
+                "page": "orders/@id",
+                "event": "update"
+            },
+            {
+                "page": "orders/@id",
+                "event": "delete"
+            },
+            {
+                "page": "payments",
+                "event": "read"
+            },
+            {
+                "page": "payments/@id",
+                "event": "read"
+            },
+            {
+                "page": "payments",
+                "event": "create"
+            },
+            {
+                "page": "payments/@id",
+                "event": "update"
+            },
+            {
+                "page": "payments/@id",
+                "event": "delete"
+            },
+            {
+                "page": "poles",
+                "event": "read"
+            },
+            {
+                "page": "poles/@id",
+                "event": "read"
+            },
+            {
+                "page": "poles",
+                "event": "create"
+            },
+            {
+                "page": "poles/@id",
+                "event": "update"
+            },
+            {
+                "page": "poles/@id",
+                "event": "delete"
+            },
+            {
+                "page": "positionings",
+                "event": "read"
+            },
+            {
+                "page": "positionings/@id",
+                "event": "read"
+            },
+            {
+                "page": "positionings",
+                "event": "create"
+            },
+            {
+                "page": "positionings/@id",
+                "event": "update"
+            },
+            {
+                "page": "positionings/@id",
+                "event": "delete"
+            },
+            {
+                "page": "products",
+                "event": "read"
+            },
+            {
+                "page": "products/@id",
+                "event": "read"
+            },
+            {
+                "page": "products",
+                "event": "create"
+            },
+            {
+                "page": "products/@id",
+                "event": "update"
+            },
+            {
+                "page": "products/@id",
+                "event": "delete"
+            },
+            {
+                "page": "projects",
+                "event": "read"
+            },
+            {
+                "page": "projects/@id",
+                "event": "read"
+            },
+            {
+                "page": "projects",
+                "event": "create"
+            },
+            {
+                "page": "projects/@id",
+                "event": "update"
+            },
+            {
+                "page": "projects/@id",
+                "event": "delete"
+            },
+            {
+                "page": "purchases",
+                "event": "read"
+            },
+            {
+                "page": "purchases/@id",
+                "event": "read"
+            },
+            {
+                "page": "purchases",
+                "event": "create"
+            },
+            {
+                "page": "purchases/@id",
+                "event": "update"
+            },
+            {
+                "page": "purchases/@id",
+                "event": "delete"
+            },
+            {
+                "page": "reporting-companies",
+                "event": "read"
+            },
+            {
+                "page": "reporting-production-plans",
+                "event": "read"
+            },
+            {
+                "page": "reporting-projects",
+                "event": "read"
+            },
+            {
+                "page": "reporting-synthesis",
+                "event": "read"
+            },
+            {
+                "page": "resources",
+                "event": "read"
+            },
+            {
+                "page": "resources/@id",
+                "event": "read"
+            },
+            {
+                "page": "resources",
+                "event": "create"
+            },
+            {
+                "page": "resources/@id",
+                "event": "update"
+            },
+            {
+                "page": "resources/@id",
+                "event": "delete"
+            },
+            {
+                "page": "roles",
+                "event": "read"
+            },
+            {
+                "page": "roles/@id",
+                "event": "read"
+            },
+            {
+                "page": "roles",
+                "event": "create"
+            },
+            {
+                "page": "roles/@id",
+                "event": "update"
+            },
+            {
+                "page": "roles/@id",
+                "event": "delete"
+            },
+            {
+                "page": "share",
+                "event": "read"
+            },
+            {
+                "page": "share",
+                "event": "create"
+            },
+            {
+                "page": "subscription",
+                "event": "read"
+            },
+            {
+                "page": "targets/@id",
+                "event": "read"
+            },
+            {
+                "page": "targets",
+                "event": "create"
+            },
+            {
+                "page": "targets/@id",
+                "event": "update"
+            },
+            {
+                "page": "targets/@id",
+                "event": "delete"
+            },
+            {
+                "page": "thumbnails/@id",
+                "event": "read"
+            },
+            {
+                "page": "thumbnails",
+                "event": "create"
+            },
+            {
+                "page": "thumbnails/@id",
+                "event": "delete"
+            },
+            {
+                "page": "times",
+                "event": "read"
+            },
+            {
+                "page": "times-reports",
+                "event": "read"
+            },
+            {
+                "page": "times-reports",
+                "event": "create"
+            },
+            {
+                "page": "times-reports/@id",
+                "event": "read"
+            },
+            {
+                "page": "times-reports/@id",
+                "event": "update"
+            },
+            {
+                "page": "times-reports/@id",
+                "event": "delete"
+            },
+            {
+                "page": "validations",
+                "event": "read"
+            },
+            {
+                "page": "validations",
+                "event": "create"
+            },
+            {
+                "page": "validations/@id",
+                "event": "read"
+            },
+            {
+                "page": "validations/@id",
+                "event": "update"
+            },
+            {
+                "page": "validations/@id",
+                "event": "delete"
+            },
+            {
+                "page": "webhooks",
+                "event": "read"
+            },
+            {
+                "page": "webhooks",
+                "event": "create"
+            },
+            {
+                "page": "webhooks/@id",
+                "event": "read"
+            },
+            {
+                "page": "webhooks/@id",
+                "event": "update"
+            },
+            {
+                "page": "webhooks/@id",
+                "event": "delete"
+            },
+            {
+                "page": "workplaces-times",
+                "event": "read"
+            },
+            {
+                "page": "apps/quotations",
+                "event": "read"
+            },
+            {
+                "page": "apps/quotations",
+                "event": "create"
+            },
+            {
+                "page": "apps/quotations",
+                "event": "update"
+            },
+            {
+                "page": "apps/quotations",
+                "event": "delete"
+            },
+            {
+                "page": "apps/advantages",
+                "event": "read"
+            },
+            {
+                "page": "apps/contracts",
+                "event": "read"
+            },
+            {
+                "page": "apps/absences-accounts",
+                "event": "read"
+            },
+            {
+                "page": "apps/absences-accounts",
+                "event": "update"
+            },
+            {
+                "page": "apps/accounting-payroll",
+                "event": "read"
+            },
+            {
+                "page": "apps/accounting-payroll",
+                "event": "update"
+            },
+            {
+                "page": "apps/advanced-candidates",
+                "event": "create"
+            },
+            {
+                "page": "apps/advanced-candidates",
+                "event": "read"
+            },
+            {
+                "page": "apps/advanced-candidates",
+                "event": "update"
+            },
+            {
+                "page": "apps/advanced-candidates",
+                "event": "delete"
+            },
+            {
+                "page": "apps/advanced-projects",
+                "event": "read"
+            },
+            {
+                "page": "apps/advanced-projects",
+                "event": "update"
+            },
+            {
+                "page": "apps/data-closing",
+                "event": "read"
+            },
+            {
+                "page": "apps/data-closing",
+                "event": "update"
+            },
+            {
+                "page": "apps/extract-payroll",
+                "event": "read"
+            },
+            {
+                "page": "apps/extract-payroll",
+                "event": "update"
+            },
+            {
+                "page": "apps/plan-production",
+                "event": "read"
+            },
+            {
+                "page": "apps/post-production",
+                "event": "read"
+            },
+            {
+                "page": "apps/post-production",
+                "event": "update"
+            },
+            {
+                "page": "apps/survey",
+                "event": "read"
+            },
+            {
+                "page": "apps/survey",
+                "event": "update"
+            },
+            {
+                "page": "apps/emailing",
+                "event": "create"
+            },
+            {
+                "page": "apps/emailing",
+                "event": "read"
+            },
+            {
+                "page": "apps/emailing",
+                "event": "update"
+            },
+            {
+                "page": "apps/emailing",
+                "event": "delete"
+            },
+            {
+                "page": "apps/notifications",
+                "event": "read"
+            },
+            {
+                "page": "apps/notifications",
+                "event": "update"
+            },
+            {
+                "page": "apps/exceptional-activity",
+                "event": "read"
+            },
+            {
+                "page": "apps/exceptional-activity",
+                "event": "update"
+            },
+            {
+                "page": "apps/hrflow",
+                "event": "create"
+            },
+            {
+                "page": "apps/hrflow",
+                "event": "read"
+            },
+            {
+                "page": "apps/hrflow",
+                "event": "update"
+            },
+            {
+                "page": "apps/sepa",
+                "event": "read"
+            },
+            {
+                "page": "apps/sepa",
+                "event": "update"
+            },
+            {
+                "page": "apps/saas-editor",
+                "event": "read"
+            },
+            {
+                "page": "apps/saas-editor",
+                "event": "update"
+            }
+        ],
+        "version": "7.0.0-2023-01-06-09:47",
+        "isLogged": true,
+        "language": "fr"
+    },
+    "data": {
+        "id": "37934",
+        "type": "app",
+        "attributes": {
+            "creationDate": "2021-10-15T09:36:55+0200",
+            "updateDate": "2023-01-09T14:10:57+0100",
+            "name": "Random App Type 1",
+            "title": "Random App Type 1",
+            "signedRequest": "Nzg0ZmIwN2JkNmQ2NGFlYDFwZmZjMTFjNzk0OWQyM2ZiNWVmODI0MzFmMjU2YzI5Mjg5Nzc4ZjU2OTI4M2RiNw==.eyJ1c2VDFG9rZW4iOiIzMjJlNzQ2NTczNzQ1Zjc0NjQ3NSIsImNsaWVudFRva2VuIjoiNzQ2NTczNzQ1Zjc0NjQ3NSIsImxhbmd1YWdlIjoiZnIiLCJpc3N1ZWRBdCI6IjIwMjMtMDEtMTlUMTE6NTM6MjErMDEwMCJ9",
+            "category": "other",
+            "code": "randomapptype1",
+            "key": "bem43ca3Sb9b0dab7d32",
+            "url": "https://mock.no-server/api/apps/advantages",
+            "integration": "module",
+            "website": "https://mock.no-server/random-app-type-1",
+            "visibility": "allowedManagers",
+            "testimoniesUrl": "",
+            "termsOfUseUrl": "",
+            "description": "Random App Type 1 list every content in the random module",
+            "price": "400USD/year",
+            "logo": "https://mock.no-server/img/marketplace/apps/37934.png?filemtime=1673269864",
+            "isPublic": true,
+            "hasConfigurationPage": false,
+            "isValidated": true,
+            "isInstalled": true,
+            "isRefreshTokenValidated": true,
+            "isBoondManagerApp": true,
+            "apisAllowed": [],
+            "hostsAllowed": [],
+            "customersAllowed": [],
+            "buttonsSetting": [],
+            "iFramesSetting": [],
+            "triggersSetting": [],
+            "tokenSecurity": "permanent"
+        },
+        "relationships": {
+            "vendor": {
+                "data": {
+                    "id": "vendor_1",
+                    "type": "vendor"
+                }
+            }
+        }
+    },
+    "included": [
+        {
+            "id": "vendor_1",
+            "type": "vendor",
+            "attributes": {
+                "name": "Test",
+                "logo": "https://mock.no-server/img/marketplace/vendors/327352.png",
+                "isOwner": false
+            }
+        }
+    ]
+}

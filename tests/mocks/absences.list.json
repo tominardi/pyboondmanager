@@ -1,0 +1,605 @@
+{
+    "meta": {
+        "totals": {
+            "rows": 49
+        },
+        "version": "7.0.0-2023-01-06-09:47",
+        "isLogged": true,
+        "language": "fr"
+    },
+    "data": [
+        {
+            "id": "27",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 1,
+                "workUnitType": {
+                    "reference": 5,
+                    "activityType": "absence",
+                    "name": "RTT"
+                },
+                "startDate": "2021-05-26",
+                "endDate": "2021-05-26",
+                "absencesReport": {
+                    "id": "16",
+                    "creationDate": "2021-07-24T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "26",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 3,
+                "workUnitType": {
+                    "reference": 5,
+                    "activityType": "absence",
+                    "name": "RTT"
+                },
+                "startDate": "2021-05-22",
+                "endDate": "2021-05-24",
+                "absencesReport": {
+                    "id": "16",
+                    "creationDate": "2021-07-24T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "25",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 4,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-05-02",
+                "endDate": "2021-05-05",
+                "absencesReport": {
+                    "id": "16",
+                    "creationDate": "2021-07-24T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "37",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 4,
+                "workUnitType": {
+                    "reference": 5,
+                    "activityType": "absence",
+                    "name": "RTT"
+                },
+                "startDate": "2021-05-09",
+                "endDate": "2021-05-12",
+                "absencesReport": {
+                    "id": "22",
+                    "creationDate": "2021-07-24T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "36",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 4,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-05-02",
+                "endDate": "2021-05-05",
+                "absencesReport": {
+                    "id": "22",
+                    "creationDate": "2021-07-24T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "35",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 5,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-07-17",
+                "endDate": "2021-07-21",
+                "absencesReport": {
+                    "id": "21",
+                    "creationDate": "2021-07-24T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "5",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 5,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-06-12",
+                "endDate": "2021-06-16",
+                "absencesReport": {
+                    "id": "4",
+                    "creationDate": "2021-07-04T00:00:00+0200"
+                }
+            }
+        },
+        {
+            "id": "15",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 2,
+                "workUnitType": {
+                    "reference": 5,
+                    "activityType": "absence",
+                    "name": "RTT"
+                },
+                "startDate": "2021-06-01",
+                "endDate": "2021-06-02",
+                "absencesReport": {
+                    "id": "9",
+                    "creationDate": "2021-07-21T00:00:00+0200"
+                }
+            }
+        },
+        {
+            "id": "14",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 2,
+                "workUnitType": {
+                    "reference": 5,
+                    "activityType": "absence",
+                    "name": "RTT"
+                },
+                "startDate": "2021-05-30",
+                "endDate": "2021-05-31",
+                "absencesReport": {
+                    "id": "9",
+                    "creationDate": "2021-07-21T00:00:00+0200"
+                }
+            }
+        },
+        {
+            "id": "13",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 4,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-05-02",
+                "endDate": "2021-05-05",
+                "absencesReport": {
+                    "id": "9",
+                    "creationDate": "2021-07-21T00:00:00+0200"
+                }
+            }
+        },
+        {
+            "id": "52",
+            "type": "absence",
+            "attributes": {
+                "title": "avant",
+                "duration": 1,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2022-03-13",
+                "endDate": "2022-03-13",
+                "absencesReport": {
+                    "id": "31",
+                    "creationDate": "2022-07-19T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "51",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 1,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2022-07-31",
+                "endDate": "2022-07-31",
+                "absencesReport": {
+                    "id": "31",
+                    "creationDate": "2022-07-19T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "50",
+            "type": "absence",
+            "attributes": {
+                "title": "avant",
+                "duration": 1,
+                "workUnitType": {
+                    "reference": 1,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2022-03-13",
+                "endDate": "2022-03-13",
+                "absencesReport": {
+                    "id": "30",
+                    "creationDate": "2022-07-19T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "49",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 1,
+                "workUnitType": {
+                    "reference": 1,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2022-07-31",
+                "endDate": "2022-07-31",
+                "absencesReport": {
+                    "id": "30",
+                    "creationDate": "2022-07-19T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "12",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 1,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-05-26",
+                "endDate": "2021-05-26",
+                "absencesReport": {
+                    "id": "8",
+                    "creationDate": "2021-07-11T00:00:00+0200"
+                }
+            }
+        },
+        {
+            "id": "11",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 3,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-05-22",
+                "endDate": "2021-05-24",
+                "absencesReport": {
+                    "id": "8",
+                    "creationDate": "2021-07-11T00:00:00+0200"
+                }
+            }
+        },
+        {
+            "id": "34",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 2,
+                "workUnitType": {
+                    "reference": 5,
+                    "activityType": "absence",
+                    "name": "RTT"
+                },
+                "startDate": "2021-07-12",
+                "endDate": "2021-07-13",
+                "absencesReport": {
+                    "id": "20",
+                    "creationDate": "2021-07-24T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "33",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 2,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-07-10",
+                "endDate": "2021-07-11",
+                "absencesReport": {
+                    "id": "20",
+                    "creationDate": "2021-07-24T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "32",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 4,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-05-09",
+                "endDate": "2021-05-12",
+                "absencesReport": {
+                    "id": "19",
+                    "creationDate": "2021-07-24T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "21",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 5,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-07-17",
+                "endDate": "2021-07-21",
+                "absencesReport": {
+                    "id": "13",
+                    "creationDate": "2021-07-21T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "20",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 1,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-07-14",
+                "endDate": "2021-07-14",
+                "absencesReport": {
+                    "id": "13",
+                    "creationDate": "2021-07-21T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "19",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 4,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-05-02",
+                "endDate": "2021-05-05",
+                "absencesReport": {
+                    "id": "12",
+                    "creationDate": "2021-07-21T00:00:00+0200"
+                }
+            }
+        },
+        {
+            "id": "24",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 5,
+                "workUnitType": {
+                    "reference": 4,
+                    "activityType": "absence",
+                    "name": "CSS"
+                },
+                "startDate": "2021-07-17",
+                "endDate": "2021-07-21",
+                "absencesReport": {
+                    "id": "15",
+                    "creationDate": "2021-07-21T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "23",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 5,
+                "workUnitType": {
+                    "reference": 5,
+                    "activityType": "absence",
+                    "name": "RTT"
+                },
+                "startDate": "2021-07-10",
+                "endDate": "2021-07-14",
+                "absencesReport": {
+                    "id": "15",
+                    "creationDate": "2021-07-21T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "22",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 4,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-05-02",
+                "endDate": "2021-05-05",
+                "absencesReport": {
+                    "id": "14",
+                    "creationDate": "2021-07-21T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "30",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 4,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-05-09",
+                "endDate": "2021-05-12",
+                "absencesReport": {
+                    "id": "18",
+                    "creationDate": "2021-07-24T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "38",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 5,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-06-12",
+                "endDate": "2021-06-16",
+                "absencesReport": {
+                    "id": "23",
+                    "creationDate": "2021-07-24T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "29",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 1,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-05-26",
+                "endDate": "2021-05-26",
+                "absencesReport": {
+                    "id": "17",
+                    "creationDate": "2021-07-24T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "28",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 3,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-05-22",
+                "endDate": "2021-05-24",
+                "absencesReport": {
+                    "id": "17",
+                    "creationDate": "2021-07-24T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        },
+        {
+            "id": "41",
+            "type": "absence",
+            "attributes": {
+                "title": "",
+                "duration": 2,
+                "workUnitType": {
+                    "reference": 3,
+                    "activityType": "absence",
+                    "name": "CP"
+                },
+                "startDate": "2021-06-01",
+                "endDate": "2021-06-02",
+                "absencesReport": {
+                    "id": "24",
+                    "creationDate": "2021-07-24T00:00:00+0200",
+                    "state": "savedAndNoValidation"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,345 @@
+{
+    "meta": {
+        "expectedValidatorsAllowedForValidate": [
+            {
+                "id": "12",
+                "firstName": "Timothy",
+                "lastName": "WILSON"
+            }
+        ],
+        "expectedValidatorsAllowedForUnValidate": [],
+        "expectedValidatorsAllowedForReject": [
+            {
+                "id": "12",
+                "firstName": "Timothy",
+                "lastName": "WILSON"
+            }
+        ],
+        "version": "7.0.0-2023-01-06-09:47",
+        "isLogged": true,
+        "language": "fr"
+    },
+    "data": {
+        "id": "24",
+        "type": "absencesreport",
+        "attributes": {
+            "creationDate": "2021-07-24T00:00:00+0200",
+            "updateDate": "2021-07-24T00:00:00+0200",
+            "informationComments": "",
+            "absencesQuestions": [],
+            "state": "waitingForValidation",
+            "absencesPeriods": [
+                {
+                    "id": "39",
+                    "startDate": "2021-05-02",
+                    "endDate": "2021-05-05",
+                    "duration": 4,
+                    "title": "",
+                    "workUnitType": {
+                        "reference": 3,
+                        "name": "CP",
+                        "activityType": "absence"
+                    }
+                },
+                {
+                    "id": "40",
+                    "startDate": "2021-05-30",
+                    "endDate": "2021-05-31",
+                    "duration": 2,
+                    "title": "",
+                    "workUnitType": {
+                        "reference": 3,
+                        "name": "CP",
+                        "activityType": "absence"
+                    }
+                },
+                {
+                    "id": "41",
+                    "startDate": "2021-06-01",
+                    "endDate": "2021-06-02",
+                    "duration": 2,
+                    "title": "",
+                    "workUnitType": {
+                        "reference": 3,
+                        "name": "CP",
+                        "activityType": "absence"
+                    }
+                }
+            ]
+        },
+        "relationships": {
+            "validationWorkflow": {
+                "data": [
+                    {
+                        "id": "15",
+                        "type": "resource"
+                    },
+                    {
+                        "id": "12",
+                        "type": "resource"
+                    },
+                    {
+                        "id": "10",
+                        "type": "resource"
+                    }
+                ]
+            },
+            "resource": {
+                "data": {
+                    "id": "15",
+                    "type": "resource"
+                }
+            },
+            "agency": {
+                "data": {
+                    "id": "2",
+                    "type": "agency"
+                }
+            },
+            "files": {
+                "data": []
+            },
+            "validations": {
+                "data": [
+                    {
+                        "id": "295",
+                        "type": "validation"
+                    },
+                    {
+                        "id": "296",
+                        "type": "validation"
+                    }
+                ]
+            },
+            "createdBy": {
+                "data": {
+                    "id": "15",
+                    "type": "resource"
+                }
+            }
+        }
+    },
+    "included": [
+        {
+            "id": "15",
+            "type": "resource",
+            "attributes": {
+                "lastName": "WILLIAMS",
+                "firstName": "Charles",
+                "function": "",
+                "workUnitTypesAllowedForAbsences": [],
+                "workUnitRate": "notUsed"
+            },
+            "relationships": {
+                "agency": {
+                    "data": {
+                        "id": "2",
+                        "type": "agency"
+                    }
+                },
+                "absencesReports": {
+                    "data": [
+                        {
+                            "id": "24",
+                            "type": "absencesreport"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "12",
+            "type": "resource",
+            "attributes": {
+                "lastName": "WILSON",
+                "firstName": "Timothy",
+                "function": ""
+            }
+        },
+        {
+            "id": "10",
+            "type": "resource",
+            "attributes": {
+                "lastName": "HARRIS",
+                "firstName": "Gregory",
+                "function": "Directeur d'agence"
+            }
+        },
+        {
+            "id": "2",
+            "type": "agency",
+            "attributes": {
+                "name": "ESN United Kingdom",
+                "workUnitRate": 1,
+                "calendar": "calendar1",
+                "absencesLegals": "",
+                "workUnitTypes": [
+                    {
+                        "reference": 1,
+                        "activityType": "production",
+                        "name": "Normale"
+                    },
+                    {
+                        "reference": 3,
+                        "activityType": "absence",
+                        "name": "CP"
+                    },
+                    {
+                        "reference": 4,
+                        "activityType": "absence",
+                        "name": "CSS"
+                    },
+                    {
+                        "reference": 5,
+                        "activityType": "absence",
+                        "name": "RTT"
+                    },
+                    {
+                        "reference": 6,
+                        "activityType": "internal",
+                        "name": "Autre"
+                    },
+                    {
+                        "reference": 7,
+                        "activityType": "absence",
+                        "name": "D\u00e9c\u00e8s/Mariage"
+                    },
+                    {
+                        "reference": 8,
+                        "activityType": "absence",
+                        "name": "Maladie"
+                    },
+                    {
+                        "reference": 9,
+                        "activityType": "internal",
+                        "name": "Formation"
+                    },
+                    {
+                        "reference": 10,
+                        "activityType": "internal",
+                        "name": "Intercontrat"
+                    },
+                    {
+                        "reference": 11,
+                        "activityType": "internal",
+                        "name": "Projet Int."
+                    },
+                    {
+                        "reference": 12,
+                        "activityType": "absence",
+                        "name": "Maternit\u00e9/Paternit\u00e9"
+                    },
+                    {
+                        "reference": 13,
+                        "activityType": "exceptionalCalendar",
+                        "name": "Astreintes"
+                    },
+                    {
+                        "reference": 14,
+                        "activityType": "exceptionalTime",
+                        "name": "Heures Sup."
+                    },
+                    {
+                        "reference": 15,
+                        "activityType": "internal",
+                        "name": "Gestion RH"
+                    },
+                    {
+                        "reference": 16,
+                        "activityType": "internal",
+                        "name": "Avant Vente"
+                    }
+                ],
+                "absencesReportsQuestions": []
+            }
+        },
+        {
+            "id": "24",
+            "type": "absencesreport",
+            "attributes": {
+                "state": "waitingForValidation",
+                "absencesPeriods": [
+                    {
+                        "id": "39",
+                        "startDate": "2021-05-02",
+                        "endDate": "2021-05-05",
+                        "duration": 4,
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "CP"
+                        }
+                    },
+                    {
+                        "id": "40",
+                        "startDate": "2021-05-30",
+                        "endDate": "2021-05-31",
+                        "duration": 2,
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "CP"
+                        }
+                    },
+                    {
+                        "id": "41",
+                        "startDate": "2021-06-01",
+                        "endDate": "2021-06-02",
+                        "duration": 2,
+                        "workUnitType": {
+                            "reference": 3,
+                            "activityType": "absence",
+                            "name": "CP"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "295",
+            "type": "validation",
+            "attributes": {
+                "date": "2021-07-24",
+                "state": "validated",
+                "reason": ""
+            },
+            "relationships": {
+                "realValidator": {
+                    "data": {
+                        "id": "15",
+                        "type": "resource"
+                    }
+                },
+                "expectedValidator": {
+                    "data": {
+                        "id": "15",
+                        "type": "resource"
+                    }
+                }
+            }
+        },
+        {
+            "id": "296",
+            "type": "validation",
+            "attributes": {
+                "date": "2021-07-24",
+                "state": "waitingForValidation",
+                "reason": ""
+            },
+            "relationships": {
+                "realValidator": {
+                    "data": {
+                        "id": "12",
+                        "type": "resource"
+                    }
+                },
+                "expectedValidator": {
+                    "data": {
+                        "id": "12",
+                        "type": "resource"
+                    }
+                }
+            }
+        }
+    ]
+}

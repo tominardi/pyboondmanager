@@ -1,0 +1,38 @@
+fail_fast: true
+repos:
+  -   repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v1.2.3
+      hooks:
+      -   id: check-merge-conflict
+      -   id: debug-statements
+      -   id: check-json
+      -   id: double-quote-string-fixer
+      -   id: trailing-whitespace
+          files: (Dockerfile|Jenkinsfile|rc|\.(cfg|css|csv|feature|gitignore|html|inc|ini|info|install|java|js|json|md|module|php|pp|properties|py|sh|txt|xml|ya?ml))$
+          args:
+          - --no-markdown-linebreak-ext
+  -   repo: https://github.com/pre-commit/mirrors-autopep8
+      rev: v1.4.3
+      hooks:
+      -   id: autopep8
+  -   repo: local
+      hooks:
+      -   id: pylint
+          name: pylint
+          entry: python -m pylint.__main__
+          language: system
+          types: [python]
+          args:
+          - --rcfile=setup.cfg
+      -   id: tests
+          name: run tests
+          entry: python -m coverage run -m pytest
+          language: system
+          types: [python]
+          pass_filenames: false
+      -   id: coverage
+          name: check coverage
+          entry: python -m coverage html --fail-under=95
+          language: system
+          types: [python]
+          pass_filenames: false

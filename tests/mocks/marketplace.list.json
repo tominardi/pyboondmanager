@@ -1,0 +1,71 @@
+{
+    "meta": {
+        "totals": {
+            "rows": 2
+        },
+        "version": "7.0.0-2023-01-06-09:47",
+        "isLogged": true,
+        "language": "fr"
+    },
+    "data": [
+        {
+            "id": "37934",
+            "type": "app",
+            "attributes": {
+                "isInstalled": true,
+                "logo": "https://mock.no-server/img/marketplace/apps/37934.png?filemtime=1673269864",
+                "code": "randomapptype1",
+                "integration": "module",
+                "isValidated": true,
+                "isPublic": true,
+                "name": "Random App Type 1",
+                "website": "https://mock.no-server/random-app-type-1",
+                "title": "Random App Type 1",
+                "description": "Random App Type 1 list every content in the random module"
+            },
+            "relationships": {
+                "vendor": {
+                    "data": {
+                        "id": "vendor_1",
+                        "type": "vendor"
+                    }
+                }
+            }
+        },
+        {
+            "id": "37935",
+            "type": "app",
+            "attributes": {
+                "isInstalled": true,
+                "logo": "https://mock.no-server/img/marketplace/apps/100016.png?filemtime=1673269864",
+                "code": "randomapptype2",
+                "integration": "module",
+                "isValidated": true,
+                "isPublic": true,
+                "name": "Random App Type 2",
+                "website": "https://mock.no-server/random-app-type-2",
+                "title": "Type 2",
+                "description": "Random App Type 2 list every odd content in the random module"
+            },
+            "relationships": {
+                "vendor": {
+                    "data": {
+                        "id": "vendor_1",
+                        "type": "vendor"
+                    }
+                }
+            }
+        }
+    ],
+    "included": [
+        {
+            "id": "vendor_1",
+            "type": "vendor",
+            "attributes": {
+                "name": "Test",
+                "logo": "https://mock.no-server/img/marketplace/vendors/327352.png",
+                "isOwner": false
+            }
+        }
+    ]
+}

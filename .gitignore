@@ -1,0 +1,47 @@
+# os artifacts
+__pycache__
+*.pyc
+*.py[cod]
+*.egg-info
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# logs, reports and artifacts
+logs
+plain.output
+**/*/reports/*.html
+**/*/reports/*.json
+**/*/reports/*.log
+**/*/*report*.html
+htmlcov
+.coverage
+artifacts
+
+#python
+local.py
+secrets.json
+.pytest_cache
+dist
+build
+
+#databases
+.history
+db.sqlite3
+
+.floorc.json
+
+# documentations
+**/*/_build
+
+# ignored inputs
+assets/chrome_extensions/*
+assets/firefox_extensions/*

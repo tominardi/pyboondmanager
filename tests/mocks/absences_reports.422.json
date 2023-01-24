@@ -1,0 +1,1 @@
+{"meta": {"version": "7.0.0-2023-01-06-09:47", "isLogged": true, "language": "fr"}, "errors": [{"status": "422", "code": "1017", "detail": "1017 - Missing required attribute", "source": {"parameter": "endMonth"}}, {"status": "422", "code": "1017", "detail": "1017 - Missing required attribute", "source": {"parameter": "startMonth"}}]}
