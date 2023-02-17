@@ -6,7 +6,7 @@ This Python connector is not an officially supported connector by BoondManager. 
 
 BoondManager is an ERP for consulting and IT services companies.
 
-This python connector allow you to use the BoondManager API for your custom developments.
+This python connector allows you to use the BoondManager API for your custom developments.
 
 If you encounter any issues or have questions about this connector, please reach out to the developer or community for support.
 
@@ -32,7 +32,7 @@ pip install pyboondmanager
 
 ### Installation
 
-After cloning this repository and create a virtualenv, install the dependencies :
+After cloning this repository, create a virtualenv and install the dependencies :
 
 ```bash
 pip install -r requirements/dev.txt
@@ -51,5 +51,5 @@ The next steps are on it !
 ## Links
 
 * [Documentation](https://pyboondmanager.readthedocs.io/)
-* Visit [Boondmanager website](https://www.boondmanager.com/en/) for more informations.
+* Visit [Boondmanager website](https://www.boondmanager.com/en/) for more information.
 * [Boondmanager Support and documentations](https://support.boondmanager.com)

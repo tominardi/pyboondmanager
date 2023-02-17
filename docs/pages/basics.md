@@ -2,14 +2,13 @@
 
 ## Authentication
 
-As mentionned in official BoondManager documentation, there are three different ways to authenticate to Boondmanager.
+As mentioned in official BoondManager documentation, there are three different ways to authenticate to Boondmanager.
 
 If provided, they are used in this order :
 
 ### Basic auth
 
-Basic HTTP authentication, username / password, given in a dictionnary.
-
+Basic HTTP authentication, username / password, given in a dictionary.
 
 Example :
 
@@ -29,7 +28,7 @@ You'll need the following informations :
 * The client's token found on client's administrator interface > developer space > API / Sandbox
 * The client's key found on client's administrator interface > developer space > API / Sandbox
 
-The `boondmanager.auth.get_jwt` helper can we used to generate the correct jwt.
+The `boondmanager.auth.get_jwt` helper can be used to generate the correct jwt.
 
 Example :
 
@@ -49,17 +48,17 @@ client = BoondmanagerClient(jwt_client=jwt)
 
 ### X-Jwt-App-BoondManager
 
-Same as JWT Client, but use the token of an app instead of an user.
+Same as JWT Client, but use the token of an app instead of a user.
 
 Please read the [official documentation](https://support.boondmanager.com/hc/fr/articles/360027681152-Quick-start-Guides) to understand how it works.
 
-You'll need the following informations :
+You'll need the following information :
 
 * The user's token of a BoondManager's account found on user interface > settings > security
 * The app's token sended by BoondManager during the installation of the app
 * The app's key found on client's administrator interface > apps > your app
 
-The `boondmanager.auth.get_jwt` helper can we used to generate the correct jwt.
+The `boondmanager.auth.get_jwt` helper can be used to generate the correct jwt.
 
 Example :
 
