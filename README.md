@@ -50,6 +50,6 @@ The next steps are on it !
 
 ## Links
 
-* [Documentation] (WIP)
+* [Documentation](https://pyboondmanager.readthedocs.io/)
 * Visit [Boondmanager website](https://www.boondmanager.com/en/) for more informations.
 * [Boondmanager Support and documentations](https://support.boondmanager.com)
