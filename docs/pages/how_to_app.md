@@ -8,7 +8,7 @@ For an app, you'll need to store the _app token_ on your side. The app token is 
 
 ## Create your application on BoondManager
 
-You'll need to create an registered application on BoondManager, to get an app token and enable availables endpoints.
+You'll need to create a registered application on BoondManager, to get an app token and enable available endpoints.
 
 The next steps required that you have an administrator account.
 
@@ -22,21 +22,21 @@ The type of your app should be iFrame. You can enable a config page if you need 
 
 The most important, here, is to enable the API's endpoints you'll need to use.
 
-There is many more things you can do, you can refer to the official documentation.
+There are many more things you can do, you can refer to the official documentation.
 
 ## Configure your application
 
 After saving your application page, you'll get an app key. You'll need to store it on your side.
 
-Your application need at least 3 availables uri :
+Your application needs at least 3 availables uri :
 
-* `/install` : it's called by BoondManager when you click on the "Install" button. BoondManager check that your application respond and send a secret token that you'll need to save on your side.
-* `/uninstall` : It's called when an administrator uninstall your app on BoondManager and should be used to delete the token.
+* `/install` : it's called by BoondManager when you click on the "Install" button. BoondManager checks that your application responds and sends a secret token that you'll need to save on your side.
+* `/uninstall` : It's called when an administrator uninstalls your app on BoondManager and should be used to delete the token.
 * Your homepage, entered in the url field. It's the page displayed on the iFrame.
 
 As said before, you can set a configuration page.
 
-If your application need a frontend, you also need to use the [BoondManager SDK](https://ui.boondmanager.com/sdk/boondmanager.js). It's used to manage with the primary context of root document (like set the iframe dimensions).
+If your application needs a frontend, you also need to use the [BoondManager SDK](https://ui.boondmanager.com/sdk/boondmanager.js). It's used to manage with the primary context of root document (like set the iframe dimensions).
 
 ```javascript
 document.addEventListener("DOMContentLoaded", function() {
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-When BoondManager try to install your app, it send an encoded payload that you can read with the `boondmanager.auth.decode_boondmanager_payload` function. It contains many informations that you'll need to store on your side.
+When BoondManager tries to install your app, it sends an encoded payload that you can read with the `boondmanager.auth.decode_boondmanager_payload` function. It contains a lot of information that you'll need to store on your side.
 
 By example, you can read this with the following `bottle` code :
 

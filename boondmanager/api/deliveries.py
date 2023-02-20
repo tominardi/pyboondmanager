@@ -17,7 +17,7 @@ from .base import BaseClient
 
 
 class Deliveries(BaseClient):
-    """Seach, create and manage deliveries
+    """Search, create and manage deliveries
 
     Tabs :
 
@@ -52,7 +52,7 @@ class Deliveries(BaseClient):
 
 
 class DeliveriesGroupments(BaseClient):
-    """Seach, create and manage deliveries groupments
+    """Search, create and manage deliveries groupments
 
     Usage :
 

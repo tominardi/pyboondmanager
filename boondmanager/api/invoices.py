@@ -17,7 +17,7 @@ from .base import BaseClient, DefaultEndpointMixin
 
 
 class Invoices(DefaultEndpointMixin, BaseClient):
-    """Seach, create and manage invoices
+    """Search, create and manage invoices
 
     Tabs :
 

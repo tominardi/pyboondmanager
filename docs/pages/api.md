@@ -2,7 +2,7 @@
 
 This page contains the available endpoints and the returned values.
 
-All classes inherits from BaseClient.
+All classes inherit from BaseClient.
 
 ```{eval-rst}
 .. automodule:: boondmanager.api.base
@@ -11,7 +11,7 @@ All classes inherits from BaseClient.
 
 ## Reference
 
-The BoondmanagerClient has an instance of each following classes, in a snake case style.
+The BoondmanagerClient has an instance of each following class, in a snake case style.
 
 Please refer to the [official documentation](https://doc.boondmanager.com/api-externe/) for more details about how the API works.
 
