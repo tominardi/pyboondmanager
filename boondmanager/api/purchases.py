@@ -50,4 +50,4 @@ class Purchases(DefaultEndpointMixin, BaseClient):
     allowed_methods = ['GET', 'POST', 'DELETE', 'PUT']
     list_uri = '/purchases'
     single_uri = '/purchases/{}'
-    tabs = ['rights', 'informations', 'attached-flags', 'simulation', 'payments', 'download', 'tasks']
+    tabs = ['rights', 'information', 'attached-flags', 'simulation', 'payments', 'download', 'tasks']

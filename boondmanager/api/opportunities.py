@@ -52,5 +52,5 @@ class Opportunities(DefaultEndpointMixin, BaseClient):
     allowed_methods = ['GET', 'POST', 'DELETE', 'PUT']
     list_uri = '/opportunities'
     single_uri = '/opportunities/{}'
-    tabs = ['rights', 'informations', 'attached-flags', 'simulation', 'positionings', 'actions', 'projects',
+    tabs = ['rights', 'information', 'attached-flags', 'simulation', 'positionings', 'actions', 'projects',
             'download', 'tasks']
