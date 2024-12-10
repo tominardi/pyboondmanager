@@ -35,18 +35,17 @@ class DefaultEndpointMixin():
         if params:
             req.params = params
         prepped = req.prepare()
-        self._reset()
-        self.response = self._send(session, prepped)
-        if self.response.status_code == 404:
+        response = self._send(session, prepped)
+        if response.status_code == 404:
             raise PageNotFoundError()
-        if self.response.status_code == 422:
+        if response.status_code == 422:
             messages = []
-            for error in self.response.json().get('errors'):
+            for error in response.json().get('errors'):
                 if error.get('detail') not in messages:
                     messages.append(error.get('detail'))
             raise BoondManagerUnprocessableEntity(', '.join(messages))
-        self._build_response_data()
-        return self.data
+        data = self._build_response_data(response)
+        return data
 
 
 class BaseClient:
@@ -68,27 +67,20 @@ class BaseClient:
     list_uri = None
     single_uri = None
     tabs = []
-    resource_id = None
     auth = None
-    headers = {}
-    post_data = {}
-    meta = {}
-    data = None
-    included = []
-    response = None
     client = None
-    query_params = None
     _domain = None
+    session = None
 
-    def __init__(self, *, basic_auth=None, jwt_app=None, jwt_client=None, resource_id=None, domain=None):
+    def __init__(self, *, basic_auth=None, jwt_app=None, jwt_client=None, domain=None):
         self.client = requests
-        self.resource_id = resource_id
         if basic_auth:
             self.auth = self.client.auth.HTTPBasicAuth(basic_auth.get('user'),
                                                        basic_auth.get('password'))
         self.jwt_app = jwt_app
         self.jwt_client = jwt_client
         self._domain = domain or BOONDMANAGER_API_URL
+        self.session = self.client.Session()
 
     def _make_url(self, resource_id=None, tab_name=None, forced_uri=None):
         """
@@ -107,84 +99,28 @@ class BaseClient:
             return f'{self._domain}{uri}'
         return f'{self._domain}{self.list_uri}'
 
-    def _reset(self):
-        """
-        reset the given object before launching a request
-        """
-        self.meta = {}
-        self.data = None
-        self.included = []
-        self.response = None
-
-    def _build_response_data(self):
-        response_json = self.response.json()
-        self.meta = response_json.get('meta')
+    def _build_response_data(self, response):
+        response_json = response.json()
         # response data could be a list or a dict
         if isinstance(response_json.get('data'), list):
-            self.data = [JsonAPIData(response_data) for response_data in response_json.get('data', [])]
+            data = [JsonAPIData(response_data) for response_data in response_json.get('data', [])]
         else:
-            self.data = JsonAPIData(response_json.get('data', {}))
-        for include in response_json.get('included', []):
-            self.included.append(JsonAPIData(include))
-
-    def set_headers(self, headers):
-        """
-        Replace the current headers with the given headers
-        """
-        if not isinstance(headers, dict):
-            raise TypeError(f'headers should be a dict, not {type(headers).__name__}')
-        self.headers = headers
-
-    def add_header(self, name, value):
-        """
-        Add a header to the current headers
-
-        :param name: The name of the header
-        :param value: The value of the header
-        """
-        self.headers[name] = value
-
-    def reset_headers(self):
-        """
-        Reset the headers
-        """
-        self.headers = {}
-
-    def set_query_params(self, query_params):
-        """
-        Replace the current query params with the given query_params
-        """
-        if not isinstance(query_params, dict):
-            raise TypeError(f'query params should be a dict, not {type(query_params).__name__}')
-        self.query_params = query_params
-
-    def add_query_param(self, name, value):
-        """
-        Add a query param to the current query params
-
-        :param name: The name of the query param
-        :param value: The value of the query param
-        """
-        self.query_params[name] = value
-
-    def reset_query_params(self):
-        """
-        Reset the query params
-        """
-        self.query_params = None
+            data = JsonAPIData(response_json.get('data', {}))
+        return data
 
     def _send(self, session, prepped):  # pragma: no cover
         return session.send(prepped, timeout=DEFAULT_TIMEOUT)
 
-    def _set_headers(self):
-        if not self.headers:
-            self.headers = {}
+    def _set_headers(self, headers):
+        if not headers:
+            headers = {}
         if self.jwt_app:
-            self.headers['X-Jwt-App-Boondmanager'] = self.jwt_app
+            headers['X-Jwt-App-Boondmanager'] = self.jwt_app
         if self.jwt_client:
-            self.headers['X-Jwt-Client-Boondmanager'] = self.jwt_client
+            headers['X-Jwt-Client-Boondmanager'] = self.jwt_client
+        return headers
 
-    def request(self, method, *, resource_id=None, post_data=None, tab_name=None, forced_uri=None):
+    def request(self, method, *, resource_id=None, post_data=None, tab_name=None, forced_uri=None, query_params=None):
         """
         Make a request to the API
 
@@ -196,38 +132,35 @@ class BaseClient:
         """
         if method not in self.allowed_methods:
             raise MethodNotAllowed()
-        if resource_id:
-            self.resource_id = resource_id
+        headers = {}
         if post_data:
-            self.add_header('content-type', 'application/json')
-            self.post_data = post_data
-        session = self.client.Session()
-        url = self._make_url(self.resource_id, tab_name, forced_uri=forced_uri)
+            headers['content-type'] = 'application/json'
+        # session = self.client.Session()
+        url = self._make_url(resource_id, tab_name, forced_uri=forced_uri)
         req = self.client.Request(method, url)
         if self.auth:
             req.auth = self.auth
-        if self.query_params:
-            req.params = self.query_params
-        if self.headers or self.jwt_client or self.jwt_app:
-            self._set_headers()
-            req.headers = self.headers
-        if self.post_data:
-            req.data = self.post_data
+        if query_params:
+            req.params = query_params
+        if headers or self.jwt_client or self.jwt_app:
+            headers = self._set_headers(headers)
+            req.headers = headers
+        if post_data:
+            req.data = post_data
         prepped = req.prepare()
-        self._reset()
-        self.response = self._send(session, prepped)
-        if self.response.status_code == 403:
+        response = self._send(self.session, prepped)
+        if response.status_code == 403:
             raise BoondManagerForbidden()
-        if self.response.status_code == 404:
+        if response.status_code == 404:
             raise PageNotFoundError()
-        if self.response.status_code == 422:
+        if response.status_code == 422:
             messages = []
-            for error in self.response.json().get('errors'):
+            for error in response.json().get('errors'):
                 if error.get('detail') not in messages:
                     messages.append(error.get('detail'))
             raise BoondManagerUnprocessableEntity(', '.join(messages))
-        self._build_response_data()
-        return self.data
+        data = self._build_response_data(response)
+        return data
 
     def get(self, resource_id=None, params=None):
         """
@@ -236,8 +169,9 @@ class BaseClient:
         :param resource_id: The id of the content to work on (default: None)
         """
         if params:
-            self.set_query_params(params)
-        return self.request('GET', resource_id=resource_id)
+            if not isinstance(params, dict):
+                raise TypeError(f'params for a get should be a dict, not {type(params).__name__}')
+        return self.request('GET', resource_id=resource_id, query_params=params)
 
     def get_tab(self, resource_id, tab_name):
         """
@@ -250,7 +184,6 @@ class BaseClient:
 
     def all(self, params=None):
         """Alias for get with no resource_id"""
-        self.resource_id = None
         return self.get(params=params)
 
     def post(self, data=None):

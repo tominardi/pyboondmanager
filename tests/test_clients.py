@@ -14,6 +14,8 @@
 # pylint: disable=redefined-outer-name
 
 import json
+from unittest.mock import MagicMock
+
 import pytest
 
 from boondmanager.auth import get_jwt
@@ -44,60 +46,48 @@ def save_mock_response(response, filename):
 class TestBaseClient:
     """Test the base client."""
 
-    def test_set_headers(self):
-        """Test that the headers are correctly set and overwritten each time we call the method."""
+    def test_client_request_headers(self, client, mocker):
         client = BaseClient()
-        client.set_headers({'Accept': 'application/json'})
-        client.set_headers({'Content-Type': 'application/json'})
-        assert client.headers == {'Content-Type': 'application/json'}
+        client.allowed_methods = ['GET']
+        client.jwt_client = 'mocked_jwt_token'
+        mocker.patch.object(client, '_make_url', return_value='http://test.com/resource')
+        mock_response = mocker.Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {}
+        mocker.patch.object(client, '_send', return_value=mock_response)
+        mock_request = mocker.Mock()
+        mocker.patch.object(client.client, 'Request', return_value=mock_request)
+        client.get()
 
-    def test_error_when_sending_wrong_type_on_set_header(self):
-        """Test that the client raises an exception when the headers are not a dict."""
-        client = BaseClient()
-        with pytest.raises(TypeError):
-            client.set_headers('Accept: application/json')
+        assert mock_request.headers['X-Jwt-Client-Boondmanager'] == 'mocked_jwt_token'
 
-    def test_add_header(self):
-        """Test that the headers are correctly added."""
+    def test_client_request_params(self, client, mocker):
         client = BaseClient()
-        client.set_headers({'Accept': 'application/json'})
-        client.add_header('Content-Type', 'application/json')
-        assert client.headers == {'Accept': 'application/json', 'Content-Type': 'application/json'}
+        client.allowed_methods = ['GET']
+        mocker.patch.object(client, '_make_url', return_value='http://test.com/resource')
+        mock_response = mocker.Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {}
+        mocker.patch.object(client, '_send', return_value=mock_response)
+        mock_request = mocker.Mock()
+        mocker.patch.object(client.client, 'Request', return_value=mock_request)
+        query_params = {'key': 'value'}
+        client.get(params=query_params)
+        assert mock_request.params == {'key': 'value'}
 
-    def test_reset_headers(self):
-        """Test that the headers are correctly reset."""
+    def test_client_post_headers_data(self, client, mocker):
         client = BaseClient()
-        client.set_headers({'Accept': 'application/json'})
-        client.reset_headers()
-        assert client.headers == {}
-
-    def test_set_query_params(self):
-        """Test that the query params are correctly set and overwritten each time we call the method."""
-        client = BaseClient()
-        client.set_query_params({'page': 1})
-        client.set_query_params({'page': 2})
-        assert client.query_params == {'page': 2}
-
-    def test_error_when_sending_wrong_type_on_set_query_params(self):
-        """Test that the client raises an exception when the query params are not a dict."""
-        client = BaseClient()
-        with pytest.raises(TypeError):
-            client.set_query_params('page=1')
-
-    def test_add_query_param(self):
-        """Test that the query params are correctly added."""
-        client = BaseClient()
-        client.set_query_params({'page': 1})
-        client.add_query_param('page', 2)
-        client.add_query_param('maxResult', 30)
-        assert client.query_params == {'page': 2, 'maxResult': 30}
-
-    def test_reset_query_params(self):
-        """Test that the query params are correctly reset."""
-        client = BaseClient()
-        client.set_query_params({'page': 1})
-        client.reset_query_params()
-        assert client.query_params is None
+        client.allowed_methods = ['POST']
+        mocker.patch.object(client, '_make_url', return_value='http://test.com/resource')
+        mock_response = mocker.Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {}
+        mocker.patch.object(client, '_send', return_value=mock_response)
+        mock_request = mocker.Mock()
+        mocker.patch.object(client.client, 'Request', return_value=mock_request)
+        client.post({'key': 'value'})
+        assert mock_request.data['key'] == 'value'
+        assert mock_request.headers['content-type'] == 'application/json'
 
     def test_method_not_allowed(self):
         """Test that the client raises an exception when the method is not allowed."""
@@ -116,6 +106,7 @@ class TestBaseClient:
             mock_response.json.return_value = json.load(filer)
         mocker.patch.object(client, '_send', return_value=mock_response)
         client.request('GET')
+        assert client._send.call_count == 1
 
     def test_post(self, client, mocker):
         client = BaseClient()
@@ -127,7 +118,6 @@ class TestBaseClient:
         mocker.patch.object(client, '_send', return_value=mock_response)
         client.post({'key': 'value'})
         assert client._send.call_count == 1
-        assert client.response.status_code == 200
 
     def test_put(self, client, mocker):
         client = BaseClient()
@@ -140,7 +130,6 @@ class TestBaseClient:
         mocker.patch.object(client, '_send', return_value=mock_response)
         client.put({'key': 'value'})
         assert client._send.call_count == 1
-        assert client.response.status_code == 200
 
     def test_delete(self, client, mocker):
         client = BaseClient()
@@ -152,7 +141,6 @@ class TestBaseClient:
         mocker.patch.object(client, '_send', return_value=mock_response)
         client.delete()
         assert client._send.call_count == 1
-        assert client.response.status_code == 200
 
     def test_patch(self, client, mocker):
         client = BaseClient()
@@ -165,7 +153,6 @@ class TestBaseClient:
         mocker.patch.object(client, '_send', return_value=mock_response)
         client.patch({'key': 'value'})
         assert client._send.call_count == 1
-        assert client.response.status_code == 200
 
     def test_options(self, client, mocker):
         client = BaseClient()
@@ -177,7 +164,6 @@ class TestBaseClient:
         mocker.patch.object(client, '_send', return_value=mock_response)
         client.options()
         assert client._send.call_count == 1
-        assert client.response.status_code == 200
 
 
 class TestAbsences:
@@ -190,7 +176,6 @@ class TestAbsences:
             mock_response.json.return_value = json.load(filer)
         mocker.patch.object(client.absences, '_send', return_value=mock_response)
         absences = client.absences.all()
-        assert client.absences.response.status_code == 200
         assert len(absences) == 30
         assert client.absences._send.call_count == 1
 
@@ -212,7 +197,6 @@ class TestAbsencesReports:
             mock_response.json.return_value = json.load(filer)
         mocker.patch.object(client.absences_reports, '_send', return_value=mock_response)
         default = client.absences_reports.get_default({'resource': 1})
-        assert client.absences_reports.response.status_code == 200
         assert default.relationships.get('resource', {}).get('data', {}).get('id') == '1'
         assert client.absences_reports._send.call_count == 1
 
@@ -247,7 +231,6 @@ class TestAbsencesReports:
             mock_response.json.return_value = json.load(filer)
         mocker.patch.object(client.absences_reports, '_send', return_value=mock_response)
         absences_reports = client.absences_reports.all(params=filters)
-        assert client.absences_reports.response.status_code == 200
         assert len(absences_reports) == 30
         assert client.absences_reports._send.call_count == 1
 
@@ -258,7 +241,6 @@ class TestAbsencesReports:
             mock_response.json.return_value = json.load(filer)
         mocker.patch.object(client.absences_reports, '_send', return_value=mock_response)
         absences_report = client.absences_reports.get(24)
-        assert client.absences_reports.response.status_code == 200
         assert absences_report.id == '24'
         assert client.absences_reports._send.call_count == 1
 
@@ -269,7 +251,6 @@ class TestAbsencesReports:
             mock_response.json.return_value = json.load(filer)
         mocker.patch.object(client.absences_reports, '_send', return_value=mock_response)
         absences_report = client.absences_reports.get_tab(24, 'rights')
-        assert client.absences_reports.response.status_code == 200
         assert absences_report.id == 'absencesreport_24'
         assert client.absences_reports._send.call_count == 1
 
@@ -316,7 +297,6 @@ class TestMarketplace:
             mock_response.json.return_value = json.load(filer)
         mocker.patch.object(client.marketplace, '_send', return_value=mock_response)
         client.marketplace.get_default()
-        assert client.marketplace.response.status_code == 200
         assert client.marketplace._send.call_count == 1
 
     def test_marketplace_list(self, client, mocker):
@@ -326,7 +306,6 @@ class TestMarketplace:
             mock_response.json.return_value = json.load(filer)
         mocker.patch.object(client.marketplace, '_send', return_value=mock_response)
         marketplace = client.marketplace.all()
-        assert client.marketplace.response.status_code == 200
         assert len(marketplace) == 2
         assert client.marketplace._send.call_count == 1
 
@@ -337,7 +316,6 @@ class TestMarketplace:
             mock_response.json.return_value = json.load(filer)
         mocker.patch.object(client.marketplace, '_send', return_value=mock_response)
         marketplace = client.marketplace.get(100016)
-        assert client.marketplace.response.status_code == 200
         assert marketplace.id == '37934'
         assert client.marketplace._send.call_count == 1
 
@@ -348,7 +326,6 @@ class TestMarketplace:
             mock_response.json.return_value = json.load(filer)
         mocker.patch.object(client.marketplace, '_send', return_value=mock_response)
         marketplace = client.marketplace.configure('randomapptype1')
-        assert client.marketplace.response.status_code == 200
         assert marketplace.id == '37934'
         assert client.marketplace._send.call_count == 1
 
@@ -360,7 +337,6 @@ class TestMarketplace:
         mocker.patch.object(client.marketplace, '_send', return_value=mock_response)
         marketplace = client.marketplace.configure('randomapptype1',
                                                    {'data': {'attributes': {'visibility': 'allManagersAndResources'}}})
-        assert client.marketplace.response.status_code == 200
         assert marketplace.id == '37934'
         assert client.marketplace._send.call_count == 1
 
@@ -373,7 +349,6 @@ class TestMarketplace:
             mock_response.json.return_value = json.load(filer)
         mocker.patch.object(client.marketplace, '_send', return_value=mock_response)
         client.marketplace.refresh_token()
-        assert client.marketplace.response.status_code == 200
         assert client.marketplace._send.call_count == 1
 
     def test_marketplace_cant_refresh_token_without_jwt(self, client):
